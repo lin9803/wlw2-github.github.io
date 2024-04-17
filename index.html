@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目展示页面</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden; /* Prevents horizontal scroll */
+    }
+    .navbar {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        /* Add padding to accommodate larger font size */
+        padding-top: 20px; 
+        padding-bottom: 20px;
+    }
+    .content {
+        width: 100%;
+        position: relative;
+    }
+    .section {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .login { background-color: #f8f8f8; }
+    .video-processing { background-color: #e9ecef; }
+    .main-screen { background-color: #dee2e6; }
+    .quality-recommendation { background-color: #ced4da; }
+    #menu a {
+        color: white;
+        padding: 15px 20px; /* Increased padding for better touch target */
+        text-decoration: none;
+        font-size: 24px; /* Increased font size */
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div id="menu">
+        <a href="#video-processing">首页</a>
+        <a href="#quality-recommendation">教室管控</a>
+        <a href="#quality-recommendation1">巡课</a>
+        <a href="#main-screen">数据中心</a>
+    </div>
+</div>
+
+<div class="content">
+    <div id="video-processing" class="section video-processing">
+        <img src="主页面.png">
+    </div>
+    <div id="quality-recommendation" class="section quality-recommendation">
+        <img src="教室管控.jpg">
+    </div>
+    <div id="quality-recommendation1" class="section quality-recommendation">
+        <img src="教室管控1.jpg">
+    </div>
+    <div id="main-screen" class="section main-screen">
+        <img src="数据中心.png">
+    </div>
+</div>
+
+<script>
+    // Add smooth scrolling to all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
 
